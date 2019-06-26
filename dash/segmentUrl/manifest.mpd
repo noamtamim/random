@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<MPD
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="urn:mpeg:dash:schema:mpd:2011"
+    xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd"
+    type="static"
+    mediaPresentationDuration="PT96.040S"
+    minBufferTime="PT4S"
+    profiles="urn:mpeg:dash:profile:isoff-main:2011">
+  <Period>
+    <AdaptationSet
+        id="1"
+        segmentAlignment="true"
+        maxWidth="1024"
+        maxHeight="576"
+        maxFrameRate="25">
+      <Representation
+          id="f1-v1-x3"
+          mimeType="video/mp4"
+          codecs="avc1.4d401f"
+          width="640"
+          height="360"
+          frameRate="25"
+          sar="1:1"
+          startWithSAP="1"
+          bandwidth="848157">
+        <SegmentList timescale="1000" duration="4000" startNumber="1">
+          <Initialization sourceURL="0_cqqzxpmn-init-v1-x3.mp4"/>
+          <SegmentURL media="0_cqqzxpmn-1-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-2-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-3-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-4-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-5-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-6-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-7-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-8-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-9-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-10-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-11-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-12-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-13-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-14-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-15-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-16-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-17-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-18-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-19-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-20-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-21-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-22-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-23-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-24-v1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-25-v1-x3.m4s"/>
+        </SegmentList>
+      </Representation>
+      <Representation
+          id="f2-v1-x3"
+          mimeType="video/mp4"
+          codecs="avc1.4d401f"
+          width="1024"
+          height="576"
+          frameRate="25"
+          sar="1:1"
+          startWithSAP="1"
+          bandwidth="1376166">
+        <SegmentList timescale="1000" duration="4000" startNumber="1">
+          <Initialization sourceURL="0_qadwcpp5-init-v1-x3.mp4"/>
+          <SegmentURL media="0_qadwcpp5-1-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-2-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-3-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-4-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-5-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-6-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-7-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-8-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-9-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-10-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-11-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-12-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-13-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-14-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-15-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-16-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-17-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-18-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-19-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-20-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-21-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-22-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-23-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-24-v1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-25-v1-x3.m4s"/>
+        </SegmentList>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet
+        id="2"
+        segmentAlignment="true">
+      <AudioChannelConfiguration
+          schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011"
+          value="1"/>
+      <Representation
+          id="f1-a1-x3"
+          mimeType="audio/mp4"
+          codecs="mp4a.40.2"
+          audioSamplingRate="44100"
+          startWithSAP="1"
+          bandwidth="64007">
+        <SegmentList timescale="1000" duration="4000" startNumber="1">
+          <Initialization sourceURL="0_cqqzxpmn-init-a1-x3.mp4"/>
+          <SegmentURL media="0_cqqzxpmn-1-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-2-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-3-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-4-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-5-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-6-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-7-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-8-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-9-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-10-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-11-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-12-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-13-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-14-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-15-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-16-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-17-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-18-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-19-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-20-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-21-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-22-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-23-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-24-a1-x3.m4s"/>
+          <SegmentURL media="0_cqqzxpmn-25-a1-x3.m4s"/>
+        </SegmentList>
+      </Representation>
+      <Representation
+          id="f2-a1-x3"
+          mimeType="audio/mp4"
+          codecs="mp4a.40.2"
+          audioSamplingRate="44100"
+          startWithSAP="1"
+          bandwidth="127905">
+        <SegmentList timescale="1000" duration="4000" startNumber="1">
+          <Initialization sourceURL="0_qadwcpp5-init-a1-x3.mp4"/>
+          <SegmentURL media="0_qadwcpp5-1-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-2-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-3-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-4-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-5-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-6-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-7-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-8-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-9-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-10-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-11-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-12-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-13-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-14-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-15-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-16-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-17-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-18-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-19-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-20-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-21-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-22-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-23-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-24-a1-x3.m4s"/>
+          <SegmentURL media="0_qadwcpp5-25-a1-x3.m4s"/>
+        </SegmentList>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet
+        contentType="text"
+        lang="es"
+        label="Spanish"
+        mimeType="text/vtt">
+      <Representation
+          id="textstream_es_0"
+          bandwidth="0">
+        <BaseURL>0_5uqkki9l.vtt</BaseURL>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet
+        contentType="text"
+        lang="fr"
+        label="French"
+        mimeType="text/vtt">
+      <Representation
+          id="textstream_fr_1"
+          bandwidth="0">
+        <BaseURL>0_jj5ppbkc.vtt</BaseURL>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet
+        contentType="text"
+        lang="de"
+        label="German"
+        mimeType="text/vtt">
+      <Representation
+          id="textstream_de_2"
+          bandwidth="0">
+        <BaseURL>0_ybf3od3x.vtt</BaseURL>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet
+        contentType="text"
+        lang="en"
+        label="English"
+        mimeType="text/vtt">
+      <Representation
+          id="textstream_en_3"
+          bandwidth="0">
+        <BaseURL>0_pu8pjcn6.vtt</BaseURL>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+</MPD>
