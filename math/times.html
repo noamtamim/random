@@ -4,11 +4,12 @@
 
   <script>
     
-    const version = "1.10";
+    const version = "1.11";
 
     const urlParams = new URLSearchParams(window.location.search);
     const modeText = urlParams.has("mode") ? urlParams.get("mode") : "multi";
     const mode = modeText === "add" ? "+" : "*";
+    const sign = modeText === "add" ? "+" : "x";
     const maxSum = urlParams.has("maxSum") ? urlParams.get("maxSum") * 1 : 100;
     const timeSec = urlParams.has("timeSec") ? urlParams.get("timeSec") * 1 : 100;
 
@@ -115,13 +116,11 @@
 
   <script>
 
-    element("sign").innerText = mode;
+    element("sign").innerText = sign;
     element("version").innerText = "v" + version;
     element("time").innerText = timeSec;
     
-    var input = element("answer");
-
-    input.addEventListener("keyup", function(event) {
+    element("answer").addEventListener("keyup", function(event) {
       if (event.keyCode === 13) {
         event.preventDefault();
         check();
