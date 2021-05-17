@@ -8,7 +8,7 @@
 
     const urlParams = new URLSearchParams(window.location.search);
     const modeText = urlParams.has("mode") ? urlParams.get("mode") : "multi";
-    const mode = mode === "add" ? "+" : "*";
+    const mode = modeText === "add" ? "+" : "*";
     element("sign").innerText(mode);
     
     element("version").innerText = "v" + version;
