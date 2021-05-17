@@ -3,7 +3,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script>
+    
+    const version = "1.5";
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const modeText = urlParams.has("mode") ? urlParams.get("mode") : "multi";
+    const mode = mode === "add" ? "+" : "*";
+    element("sign").innerText(mode);
+    
+    element("version").innerText = "v" + version;
+    
     function element(id) {
       return document.getElementById(id);
     }
@@ -17,8 +26,16 @@
     }
 
     function pickNumbers() {
-      element("num1").innerText=factor();
-      element("num2").innerText=factor();
+      if (mode === "*") {        
+        element("num1").innerText=factor();
+        element("num2").innerText=factor();
+      } else {
+        const sum = getRandomInt(100) + 1;
+        const num1 = getRandomInt(sum);
+        const num2 = sum - num1;
+        element("num1").innerText=num1;
+        element("num2").innerText=num2;
+      }
     }
 
     function show(id) {
@@ -34,16 +51,19 @@
     }
 
     function check() {
-      var num1 = element("num1").innerText;
-      var num2 = element("num2").innerText;
-      var answer = element("answer").value.trim();
-      var good = answer == num1 * num2;
+      var num1 = element("num1").innerText * 1;
+      var num2 = element("num2").innerText * 1;
+      var answer = element("answer").value.trim() * 1;
+      
+      var good = mode === "*" ? answer == num1 * num2 : answer == num1 + num2;
       hide("good");
       hide("bad");
+      
       if (good) {
         show("good");
         element("score").innerText++;
         pickNumbers();
+        
       } else {
         show("bad");
       }
@@ -73,7 +93,7 @@
   </script>
 </head>
 <body>
-  <small>v1.3</small>
+  <small id="version"></small>
   
 
   <center>
@@ -84,9 +104,10 @@
   <br>
   <input id="start" type="button" onclick="start()" value="התחלה">
   <div hidden id="board">
-    <span id="num1">0</span> x <span id="num2">0</span> = <input id="answer" type="number" value="" size="3">
+    <span id="num1">0</span> <span id="sign"></span> <span id="num2">0</span> = <input id="answer" type="number" value="" size="3">
 
     <input type="button" value="בדיקה" onclick="check()">
+    <br>
     <img src="large-green-circle.png" id="good" width="12pt" hidden>
     <img src="large-red-circle.png" id="bad" width="12pt" hidden>
   </div>
