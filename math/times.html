@@ -2,99 +2,105 @@
 <head>
 <script>
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
-
-function factor() {
-  return getRandomInt(9) + 2;
-}
-
-function pickNumbers() {
-  document.getElementById("num1").innerText=factor();
-  document.getElementById("num2").innerText=factor();
-}
-
-function show(id) {
-  document.getElementById(id).hidden = false;
-}
-
-function hide(id) {
-  document.getElementById(id).hidden = true;
-}
-
-function focus() {
-  document.getElementById("answer").focus();
-}
-
-function check() {
-  var num1 = document.getElementById("num1").innerText;
-  var num2 = document.getElementById("num2").innerText;
-  var answer = document.getElementById("answer").value;
-  var good = answer == num1 * num2;
-  hide("good");
-  hide("bad");
-  if (good) {
-    show("good");
-    document.getElementById("score").innerText++;
-    pickNumbers();
-  } else {
-    show("bad");
+  function element(id) {
+    return document.getElementById(id);
   }
-  document.getElementById("answer").value="";
-  focus();
-  
-}
 
-function start() {
-  document.getElementById("score").innerText = 0;
-  document.getElementById("time").innerText = 100;
-  show("board");
-  hide("start");
-  pickNumbers();
-  focus();
-  setInterval(function() {
-    var time = document.getElementById("time");
-    if (time.innerText==0) {
-      show("start");
-      hide("board");
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+  function factor() {
+    return getRandomInt(9) + 2;
+  }
+
+  function pickNumbers() {
+    element("num1").innerText=factor();
+    element("num2").innerText=factor();
+  }
+
+  function show(id) {
+    element(id).hidden = false;
+  }
+
+  function hide(id) {
+    element(id).hidden = true;
+  }
+
+  function focus() {
+    element("answer").focus();
+  }
+
+  function check() {
+    var num1 = element("num1").innerText;
+    var num2 = element("num2").innerText;
+    var answer = element("answer").value.trim();
+    var good = answer == num1 * num2;
+    hide("good");
+    hide("bad");
+    if (good) {
+      show("good");
+      element("score").innerText++;
+      pickNumbers();
     } else {
-      time.innerText--;
+      show("bad");
     }
-  }, 1000);
-}
+    element("answer").value="";
+    focus();
+
+  }
+
+  function start() {
+    element("score").innerText = 0;
+    element("time").innerText = 100;
+    show("board");
+    hide("start");
+    pickNumbers();
+    focus();
+    setInterval(function() {
+      var time = element("time");
+      if (time.innerText==0) {
+        show("start");
+        hide("board");
+      } else {
+        time.innerText--;
+      }
+    }, 1000);
+  }
 
 </script>
 </head>
 <body>
+  
 
-<center>
+  <center>
 
-זמן: <span id="time" style="color:blue">100</span>
-ניקוד: <span id="score" style="color:blue">0</span>
-<br>
-<br>
-<input id="start" type="button" onclick="start()" value="התחלה">
-<div hidden id="board">
-<span id="num1">0</span> x <span id="num2">0</span> = <input id="answer" type="text" value="" size="3">
+  זמן: <span id="time" style="color:blue">100</span>
+  ניקוד: <span id="score" style="color:blue">0</span>
+  <br>
+  <br>
+  <input id="start" type="button" onclick="start()" value="התחלה">
+  <div hidden id="board">
+  <span id="num1">0</span> x <span id="num2">0</span> = <input id="answer" type="text" value="" size="3">
 
-<input type="button" value="בדיקה" onclick="check()">
-<div id="good" hidden>🟢</div><div id="bad" hidden>🔴</div>
-</div>
+  <input type="button" value="בדיקה" onclick="check()">
+  <div id="good" hidden>🟢</div><div id="bad" hidden>🔴</div>
+  </div>
 
-</center>
+  </center>
 
-<script>
+  <script>
 
-var input = document.getElementById("answer");
+  var input = element("answer");
 
-input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-    event.preventDefault();
-    check();
-  }
-}); 
+  input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      check();
+    }
+  }); 
 
-</script>
+  </script>
+  <small>v1.0</small>
 </body>
 </html>
