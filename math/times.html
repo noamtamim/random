@@ -9,10 +9,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const modeText = urlParams.has("mode") ? urlParams.get("mode") : "multi";
     const mode = modeText === "add" ? "+" : "*";
-    element("sign").innerText(mode);
-    
-    element("version").innerText = "v" + version;
-    
+
     function element(id) {
       return document.getElementById(id);
     }
@@ -116,14 +113,17 @@
 
   <script>
 
-  var input = element("answer");
+    element("sign").innerText(mode);    
+    element("version").innerText = "v" + version;
+    
+    var input = element("answer");
 
-  input.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
-      event.preventDefault();
-      check();
-    }
-  }); 
+    input.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        check();
+      }
+    }); 
 
   </script>
 </body>
