@@ -1,74 +1,76 @@
 <html>
-<head>
-<script>
+<head>  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  function element(id) {
-    return document.getElementById(id);
-  }
+  <script>
 
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
-
-  function factor() {
-    return getRandomInt(9) + 2;
-  }
-
-  function pickNumbers() {
-    element("num1").innerText=factor();
-    element("num2").innerText=factor();
-  }
-
-  function show(id) {
-    element(id).hidden = false;
-  }
-
-  function hide(id) {
-    element(id).hidden = true;
-  }
-
-  function focus() {
-    element("answer").focus();
-  }
-
-  function check() {
-    var num1 = element("num1").innerText;
-    var num2 = element("num2").innerText;
-    var answer = element("answer").value.trim();
-    var good = answer == num1 * num2;
-    hide("good");
-    hide("bad");
-    if (good) {
-      show("good");
-      element("score").innerText++;
-      pickNumbers();
-    } else {
-      show("bad");
+    function element(id) {
+      return document.getElementById(id);
     }
-    element("answer").value="";
-    focus();
 
-  }
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
 
-  function start() {
-    element("score").innerText = 0;
-    element("time").innerText = 100;
-    show("board");
-    hide("start");
-    pickNumbers();
-    focus();
-    setInterval(function() {
-      var time = element("time");
-      if (time.innerText==0) {
-        show("start");
-        hide("board");
+    function factor() {
+      return getRandomInt(9) + 2;
+    }
+
+    function pickNumbers() {
+      element("num1").innerText=factor();
+      element("num2").innerText=factor();
+    }
+
+    function show(id) {
+      element(id).hidden = false;
+    }
+
+    function hide(id) {
+      element(id).hidden = true;
+    }
+
+    function focus() {
+      element("answer").focus();
+    }
+
+    function check() {
+      var num1 = element("num1").innerText;
+      var num2 = element("num2").innerText;
+      var answer = element("answer").value.trim();
+      var good = answer == num1 * num2;
+      hide("good");
+      hide("bad");
+      if (good) {
+        show("good");
+        element("score").innerText++;
+        pickNumbers();
       } else {
-        time.innerText--;
+        show("bad");
       }
-    }, 1000);
-  }
+      element("answer").value="";
+      focus();
 
-</script>
+    }
+
+    function start() {
+      element("score").innerText = 0;
+      element("time").innerText = 100;
+      show("board");
+      hide("start");
+      pickNumbers();
+      focus();
+      setInterval(function() {
+        var time = element("time");
+        if (time.innerText==0) {
+          show("start");
+          hide("board");
+        } else {
+          time.innerText--;
+        }
+      }, 1000);
+    }
+
+  </script>
 </head>
 <body>
   
@@ -101,6 +103,6 @@
   }); 
 
   </script>
-  <small>v1.0</small>
+  <small>v1.1</small>
 </body>
 </html>
