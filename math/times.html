@@ -4,7 +4,7 @@
 
   <script>
     
-    const version = "1.9";
+    const version = "1.10";
 
     const urlParams = new URLSearchParams(window.location.search);
     const modeText = urlParams.has("mode") ? urlParams.get("mode") : "multi";
@@ -97,7 +97,7 @@
 
   <center>
 
-  זמן: <span id="time" style="color:blue">100</span>
+  זמן: <span id="time" style="color:blue">0</span>
   ניקוד: <span id="score" style="color:blue">0</span>
   <br>
   <br>
@@ -117,6 +117,7 @@
 
     element("sign").innerText = mode;
     element("version").innerText = "v" + version;
+    element("time").innerText = timeSec;
     
     var input = element("answer");
 
