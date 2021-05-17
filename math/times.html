@@ -4,7 +4,7 @@
 
   <script>
     
-    const version = "1.6";
+    const version = "1.7";
 
     const urlParams = new URLSearchParams(window.location.search);
     const modeText = urlParams.has("mode") ? urlParams.get("mode") : "multi";
@@ -113,7 +113,7 @@
 
   <script>
 
-    element("sign").innerText(mode);    
+    element("sign").innerText = mode;
     element("version").innerText = "v" + version;
     
     var input = element("answer");
