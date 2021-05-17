@@ -4,11 +4,13 @@
 
   <script>
     
-    const version = "1.8";
+    const version = "1.9";
 
     const urlParams = new URLSearchParams(window.location.search);
     const modeText = urlParams.has("mode") ? urlParams.get("mode") : "multi";
     const mode = modeText === "add" ? "+" : "*";
+    const maxSum = urlParams.has("maxSum") ? urlParams.get("maxSum") * 1 : 100;
+    const timeSec = urlParams.has("timeSec") ? urlParams.get("timeSec") * 1 : 100;
 
     function element(id) {
       return document.getElementById(id);
@@ -27,7 +29,7 @@
         element("num1").innerText=factor();
         element("num2").innerText=factor();
       } else {
-        const sum = getRandomInt(100) + 1;
+        const sum = getRandomInt(maxSum) + 1;
         const num1 = getRandomInt(sum);
         const num2 = sum - num1;
         element("num1").innerText=num1;
@@ -71,7 +73,7 @@
 
     function start() {
       element("score").innerText = 0;
-      element("time").innerText = 100;
+      element("time").innerText = timeSec;
       show("board");
       hide("start");
       pickNumbers();
