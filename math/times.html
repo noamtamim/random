@@ -1,10 +1,10 @@
 <html>
 <head>  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0">
 
   <script>
     
-    const version = "1.7";
+    const version = "1.8";
 
     const urlParams = new URLSearchParams(window.location.search);
     const modeText = urlParams.has("mode") ? urlParams.get("mode") : "multi";
@@ -104,7 +104,7 @@
     <span id="num1">0</span> <span id="sign"></span> <span id="num2">0</span> = <input id="answer" type="number" value="" size="3">
 
     <input type="button" value="בדיקה" onclick="check()">
-    <br>
+    <br><br>
     <img src="large-green-circle.png" id="good" width="12pt" hidden>
     <img src="large-red-circle.png" id="bad" width="12pt" hidden>
   </div>
