@@ -10,7 +10,8 @@
     const modeText = urlParams.has("mode") ? urlParams.get("mode") : "multi";
     const mode = modeText === "add" ? "+" : "*";
     const sign = modeText === "add" ? "+" : "x";
-    const maxSum = urlParams.has("maxSum") ? urlParams.get("maxSum") * 1 : 100;
+    const maxSum = urlParams.has("max") ? urlParams.get("max") * 1 : 100;
+    const maxFactor = urlParams.has("max") ? urlParams.get("max") * 1 : 10;
     const timeSec = urlParams.has("timeSec") ? urlParams.get("timeSec") * 1 : 100;
 
     function element(id) {
@@ -22,7 +23,7 @@
     }
 
     function factor() {
-      return getRandomInt(9) + 2;
+      return getRandomInt(maxFactor - 1) + 2;
     }
 
     function pickNumbers() {
